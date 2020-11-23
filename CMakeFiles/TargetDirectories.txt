@@ -1,0 +1,4 @@
+/home/konicks/noter/CMakeFiles/rebuild_cache.dir
+/home/konicks/noter/CMakeFiles/edit_cache.dir
+/home/konicks/noter/CMakeFiles/noter.dir
+/home/konicks/noter/CMakeFiles/noter_autogen.dir
