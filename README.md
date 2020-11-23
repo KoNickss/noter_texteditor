@@ -8,3 +8,8 @@ While I didn't remove the ability to start noter as root because I don't believe
 ## Closing message
 That being said, you can now go forth, pick the right installer (or build from source if you have serious paranoia or windows) and go forth, make all the 2008 notepad tutorials your heart desires, more power to you!
 
+
+
+
+# Releases: https://github.com/KoNickss/noter_texteditor/releases
+
