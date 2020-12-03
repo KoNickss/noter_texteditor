@@ -2,17 +2,19 @@
 #include <zconf.h>
 #include <QApplication>
 #include <QDebug>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Noter w;
+
     if(QCoreApplication::arguments().size() > 1){
-        if(QCoreApplication::arguments().at(1)=="-lu"){
+        if(QCoreApplication::arguments().at(1)=="-u"){
             system("clear");
             qDebug() << "Updating, please stand by..." << Qt::endl;
             if(geteuid()!=0){
                 qDebug() << "Please run the update as root for it to complete";
-                qDebug() << "Use Control+C to exit from this screen";
+                exit(EXIT_FAILURE);
             }else{
                 system("curl https://noterupdates.netlify.app/noter > /usr/bin/noter.1");
                 system("touch /usr/bin/up");
@@ -21,7 +23,8 @@ int main(int argc, char *argv[])
                 system("echo chmod 755 /usr/bin/noter >> /usr/bin/up");
                 system("echo rm /usr/bin/up >> /usr/bin/up");
                 system("chmod 755 /usr/bin/up ; /usr/bin/up");
-                qDebug() << "Routine finished, use Control+C to exit from this screen";
+                qDebug() << "Routine finished";
+                exit(EXIT_FAILURE);
             }
         }else{
             w.show();

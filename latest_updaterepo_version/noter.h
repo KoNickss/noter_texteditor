@@ -35,6 +35,12 @@ private slots:
     void on_actionSave_triggered();
 
 
+    void on_actionUpdate_triggered();
+
+    void on_actionClose_triggered();
+
+    void on_actionOpen_file_as_root_triggered();
+
 private:
     Ui::Noter *ui;
     QTimer *timer;

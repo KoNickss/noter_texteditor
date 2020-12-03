@@ -1,6 +1,7 @@
 #include "noter.h"
 #include "./ui_noter.h"
 #include <QtDebug>
+#include <QProcess>
 
 Noter::Noter(QWidget *parent)
     : QMainWindow(parent)
@@ -28,7 +29,8 @@ Noter::Noter(QWidget *parent)
         fisier.close();
     }
     }
-    qDebug() << "start";
+    system("mkdir ~/.local/share/noter");
+
 }
 
 Noter::~Noter()
@@ -103,4 +105,33 @@ void Noter::on_actionSave_triggered()
     scriere << textDeScris;
     fisier.close();
     fisierul = numeleFisierului;
+}
+
+void Noter::on_actionUpdate_triggered()
+{
+    QProcess askPermission;
+    askPermission.start("kdialog --password \"Please enter your password to update\"");
+    askPermission.waitForReadyRead(-1);
+    QByteArray sudoPwd = askPermission.readAll().simplified();
+    askPermission.close();
+    qDebug() << sudoPwd;
+    system("echo " + sudoPwd + " | sudo -S noter -u");
+}
+
+void Noter::on_actionClose_triggered()
+{
+    exit(EXIT_FAILURE);
+}
+
+void Noter::on_actionOpen_file_as_root_triggered()
+{
+    QProcess askPermission;
+    askPermission.start("kdialog --password \"Please enter your password\"");
+    askPermission.waitForReadyRead(-1);
+    QByteArray sudoPwd = askPermission.readAll().simplified();
+    askPermission.close();
+    system("echo " + sudoPwd + " | sudo -S cp " + fisierul.toUtf8() + " ~/.local/share/noter/");
+    system("echo " + sudoPwd + " | sudo -S noter " + fisierul.toUtf8() + " &");
+    exit(EXIT_FAILURE);
+    delete ui;
 }
