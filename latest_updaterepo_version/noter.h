@@ -8,7 +8,6 @@
 #include <QTimer>
 #include <QDialog>
 #include <QMessageBox>
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class Noter; }
 QT_END_NAMESPACE
@@ -23,6 +22,7 @@ public:
     ~Noter();
     QString fisierul="";
     bool checkwrite=false;
+
 
 public slots:
     void myfunction();

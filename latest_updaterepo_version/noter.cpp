@@ -2,6 +2,7 @@
 #include "./ui_noter.h"
 #include <QtDebug>
 #include <QProcess>
+#include <zconf.h>
 
 Noter::Noter(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +14,7 @@ Noter::Noter(QWidget *parent)
     connect(timer, SIGNAL(timeout()),this,SLOT(myfunction()));
     timer->start(100);
     qDebug() << QCoreApplication::arguments().size();
+    system("mkdir ~/.local/share/noter");
     if(QCoreApplication::arguments().size() > 1){
     if(QCoreApplication::arguments().at(1)[0]=='/'){
         fisierul = QCoreApplication::arguments().at(1);
@@ -27,9 +29,15 @@ Noter::Noter(QWidget *parent)
         QString textDeCitit = citire.readAll();
         ui->Note->setPlainText(textDeCitit);
         fisier.close();
+        checkwrite=true;
+        if(geteuid()==0){
+            system("cp " + fisierul.toUtf8() + " ~/.local/share/noter/*");
+            qDebug() << "___---___";
+        }
     }
     }
-    system("mkdir ~/.local/share/noter");
+
+
 
 }
 
@@ -55,6 +63,7 @@ void Noter::myfunction()
         if(!fisier.open(QIODevice::ReadWrite | QFile::Text)){
             QMessageBox::warning(this, "Warning", "You do not have the permission to modify this file, you can still view it but all changes regarding it will automatically be discarded.");
             checkwrite=false;
+            ui->Note->setReadOnly(true);
         }else{
             checkwrite=false;
         }
@@ -69,6 +78,7 @@ void Noter::on_actionNew_triggered()
     fisierul.clear();
     ui->Note->setPlainText(QString(""));
     setWindowTitle("Noter");
+    ui->Note->setReadOnly(false);
 }
 
 void Noter::on_actionOpen_triggered()
@@ -85,6 +95,7 @@ void Noter::on_actionOpen_triggered()
     ui->Note->setPlainText(textDeCitit);
     fisier.close();
     fisierul = numeleFisierului;
+    ui->Note->setReadOnly(false);
     checkwrite=true;
     qDebug() << "............";
 }
@@ -105,6 +116,7 @@ void Noter::on_actionSave_triggered()
     scriere << textDeScris;
     fisier.close();
     fisierul = numeleFisierului;
+    ui->Note->setReadOnly(false);
 }
 
 void Noter::on_actionUpdate_triggered()

@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>220</y>
-      <width>104</width>
-      <height>71</height>
+      <y>60</y>
+      <width>361</width>
+      <height>231</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -31,6 +31,9 @@
     </property>
     <property name="lineWrapMode">
      <enum>QPlainTextEdit::NoWrap</enum>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
     </property>
     <property name="tabStopWidth">
      <number>40</number>
@@ -46,7 +49,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
