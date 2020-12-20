@@ -8,7 +8,6 @@
 #include <QTimer>
 #include <QDialog>
 #include <QMessageBox>
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class Noter; }
 QT_END_NAMESPACE
@@ -22,6 +21,8 @@ public:
     Noter(QWidget *parent = nullptr);
     ~Noter();
     QString fisierul="";
+    bool checkwrite=false;
+
 
 public slots:
     void myfunction();
@@ -33,7 +34,12 @@ private slots:
 
     void on_actionSave_triggered();
 
-    void on_open_at_su();
+
+    void on_actionUpdate_triggered();
+
+    void on_actionClose_triggered();
+
+    void on_actionOpen_file_as_root_triggered();
 
 private:
     Ui::Noter *ui;

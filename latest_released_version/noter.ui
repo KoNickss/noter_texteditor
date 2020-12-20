@@ -18,13 +18,28 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>220</y>
-      <width>104</width>
-      <height>71</height>
+      <y>60</y>
+      <width>361</width>
+      <height>231</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 14pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QPlainTextEdit::NoWrap</enum>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="tabStopWidth">
+     <number>40</number>
+    </property>
+    <property name="backgroundVisible">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -34,7 +49,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -45,7 +60,16 @@
     <addaction name="actionSave"/>
     <addaction name="actionOpen"/>
    </widget>
+   <widget class="QMenu" name="menuNoter">
+    <property name="title">
+     <string>Noter</string>
+    </property>
+    <addaction name="actionUpdate"/>
+    <addaction name="actionOpen_file_as_root"/>
+    <addaction name="actionClose"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuNoter"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew">
@@ -61,6 +85,21 @@
   <action name="actionOpen">
    <property name="text">
     <string>Open</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionOpen_file_as_root">
+   <property name="text">
+    <string>Open file as root</string>
    </property>
   </action>
  </widget>
