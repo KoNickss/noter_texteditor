@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64 i386 source
+Codename: nr
+Components: main
+Date: Mon, 21 Dec 2020 13:14:01 +0000
+Description: Your description
+Label: Noter
+Origin: ./
+Suite: stable
+MD5Sum:
+ 76e1986eca366ea792a12b3fe4c14333              293 Packages.gz
+ 7d6ba4466247af6556c361afd0cd06fb              169 Release
+SHA1:
+ 4a050b2e3e843a44ab8cdf743a9919beacd43e92              293 Packages.gz
+ d4b3e945322273227fc1d8be64e46453acc0f2fe              169 Release
+SHA256:
+ 1965c212fb17864fc258bd07d7a42aa743a0bd2caa1410f85fd8414ff87bbf28              293 Packages.gz
+ 8397ed43e72ecbd8c7e96e9a87d03f9a026c2794e1b9c6f2a15aff4409c73637              169 Release
+SHA512:
+ 492fe09046a3b56b76708c092caceffcd539d4d2b086ec1c38afac71d5c1af46821baddc6313cb38f0cbbeeafdaaec117a9f8fe133bedaf5127c52c3dc5ee79e              293 Packages.gz
+ c702052dab253ab04b3e7e2fdf46cb6d94cb0acf78d5f15febfdafc9d6a6743f777bd06da12ce0031a999ff24d040cb7c7ed09c7becb6c340344d65c85623170              169 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQHLBAEBCgA1FiEEcekqbPP3GP79U0fwM+opP8h2bjAFAl/goQ0XHGlvYWNoaW0u
+cmFkdUBnbWFpbC5jb20ACgkQM+opP8h2bjB+Dwv9F2S3Lqc51dV61B12ieAfEH08
+AbamTC6ZwKW7walobQoVd8XvV6SSv5+qVEyJJHB7n1iaxaYPNYqNp4Ye3F9nCo/Z
+ESy1bC5OafgRo6cq+sjotRUMqRSr7AHNcSsdYqy55oLovqQrtYqYBdneY6uoNzhh
+xJCelZSwSoy3X+803C55T7ILA2ECPryIlhBKiosP1wNs9Vd0wLhWUXsvdcbd4tao
+XRWRcCTmhD6pUtKCBidD5IjH7SKrbpjxZ1rljjc/OUkFGhPvuX5bcgt0lcB34WF4
+AKo8FsyfSSiYOqCWx04QJlL/3EVRwFI6jMj2k2LGtGAltFE35phISzBC0xzoj+l6
+HBhern7JtS3QjSdBQYRqhQuclVqQ1yZW7KGf/WQgpfr87GoaYgUeK3mMhTvUPqY6
+zWepIWPO7C2uJ0vHW5DnniQNcjL9bRwuUWBf5ggz5WCBOmeVxZ28cfHdM7nIOd8o
+fauGRiteTNloBPCBw2DdP5jpah4G5eDnttE17rlj
+=rVIE
+-----END PGP SIGNATURE-----
