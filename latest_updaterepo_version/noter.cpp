@@ -36,7 +36,7 @@ Noter::Noter(QWidget *parent)
         }
     }
     }
-
+    ui->Note->setStyleSheet("background-color: rgba(255, 255, 255, 10); font: 14pt 'Ubuntu';");
 
 
 }
