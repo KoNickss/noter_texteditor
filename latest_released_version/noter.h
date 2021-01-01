@@ -44,6 +44,7 @@ private slots:
 private:
     Ui::Noter *ui;
     QTimer *timer;
+    bool can_be_closed=true;
 
 };
 #endif // NOTER_H

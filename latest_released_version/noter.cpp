@@ -36,13 +36,16 @@ Noter::Noter(QWidget *parent)
         }
     }
     }
-
+    ui->Note->setStyleSheet("background-color: rgba(255, 255, 255, 10); font: 14pt 'Ubuntu';");
 
 
 }
 
 Noter::~Noter()
 {
+    while(!can_be_closed){
+
+    }
     delete ui;
 }
 
@@ -53,9 +56,11 @@ void Noter::myfunction()
         fisier.open(QIODevice::ReadWrite | QFile::Text);
         QTextStream scriere (&fisier);
         QString textDeScris = ui->Note->toPlainText();
-        scriere << "";
-        scriere << textDeScris;
+        can_be_closed=false;
+        system("echo '' > "+fisierul.toUtf8());
+        scriere << textDeScris.toUtf8();
         fisier.close();
+        can_be_closed=true;
     }
     if(checkwrite){
         qDebug() << "-----------------";

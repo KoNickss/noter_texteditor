@@ -35,6 +35,9 @@
     <property name="readOnly">
      <bool>false</bool>
     </property>
+    <property name="overwriteMode">
+     <bool>false</bool>
+    </property>
     <property name="tabStopWidth">
      <number>40</number>
     </property>
