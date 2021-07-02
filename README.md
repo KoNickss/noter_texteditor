@@ -1,3 +1,5 @@
+# Note: this is a hello world program I made some years back to get familiar with qt and app publishing, only here cause I cant be bothered to delete it, pls ignore it
+
 # Noter, a sane text editing program
 This, above all, was me learning qt and making something I wished for: a simple and elegant KDE-friendly notepad, kwrite is imo kinda ugly and filled with useless options, the closest thing to notepad on linux was mousepad, but mousepad is the kind of package you don't let your kids around. Noter is supposed to emulate the feeling of the windows xp notepad, a simple place to jot down ideas in a hurry and maybe save them to a file, to keep in the spirit of keeping it as uncomplicated as possible, I added live save (changes commit automatically to the file) and args, and I plan to add more features in the future.
 ## Updates and multiplatform-ism
